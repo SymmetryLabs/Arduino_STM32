@@ -38,6 +38,10 @@
 #ifndef _SPI_H_INCLUDED
 #define _SPI_H_INCLUDED
 
+#ifndef SPI_PORT
+#define SPI_PORT 1
+#endif
+
 #include <libmaple/libmaple_types.h>
 #include <libmaple/spi.h>
 #include <libmaple/dma.h>
