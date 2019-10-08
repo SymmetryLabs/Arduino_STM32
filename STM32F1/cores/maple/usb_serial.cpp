@@ -63,26 +63,26 @@ USBSerial::USBSerial(void) {
 
 void USBSerial::begin(void) {
 #if BOARD_HAVE_SERIALUSB
-    usb_cdcacm_enable(BOARD_USB_DISC_DEV, BOARD_USB_DISC_BIT);
-    usb_cdcacm_set_hooks(USB_CDCACM_HOOK_RX, rxHook);
-    usb_cdcacm_set_hooks(USB_CDCACM_HOOK_IFACE_SETUP, ifaceSetupHook);
+    // usb_cdcacm_enable(BOARD_USB_DISC_DEV, BOARD_USB_DISC_BIT);
+    // usb_cdcacm_set_hooks(USB_CDCACM_HOOK_RX, rxHook);
+    // usb_cdcacm_set_hooks(USB_CDCACM_HOOK_IFACE_SETUP, ifaceSetupHook);
 #endif
 }
 
 //Roger Clark. Two new begin functions has been added so that normal Arduino Sketches that use Serial.begin(xxx) will compile.
 void USBSerial::begin(unsigned long ignoreBaud) 
 {
-volatile unsigned long removeCompilerWarningsIgnoreBaud=ignoreBaud;
+// volatile unsigned long removeCompilerWarningsIgnoreBaud=ignoreBaud;
 
-	ignoreBaud=removeCompilerWarningsIgnoreBaud;
+// 	ignoreBaud=removeCompilerWarningsIgnoreBaud;
 }
 void USBSerial::begin(unsigned long ignoreBaud, uint8_t ignore)
 {
-volatile unsigned long removeCompilerWarningsIgnoreBaud=ignoreBaud;
-volatile uint8_t removeCompilerWarningsIgnore=ignore;
+// volatile unsigned long removeCompilerWarningsIgnoreBaud=ignoreBaud;
+// volatile uint8_t removeCompilerWarningsIgnore=ignore;
 
-	ignoreBaud=removeCompilerWarningsIgnoreBaud;
-	ignore=removeCompilerWarningsIgnore;
+// 	ignoreBaud=removeCompilerWarningsIgnoreBaud;
+// 	ignore=removeCompilerWarningsIgnore;
 }
 
 void USBSerial::end(void) {
